@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    input {
+      width: 80%;
+      padding: 10px;
+    }
+
+    i {
+      content: "\f78a";
+      font-size: 24px;
+      padding-left: 25px;
+    }
+
+    li {
+      padding: 20px;
+      margin: 10px;
+      font-size: 24px;
+      list-style: none;
+      background-color: yellow;
+      /* color: white; */
+    }
+
+    p {
+      margin: 50px;
+      padding: 20px;
+      /* background-color: red; */
+    }
+
+    b {
+      float: right;
+    }
+  </style>
+
+  <body>
+    <h1>To Do List</h1>
+    <input type="date" id="date" />
+    <input type="text" id="do" />
+    <br />
+    <br />
+    <button onclick="myFunction()">do</button>
+    <br />
+    <div id="task"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

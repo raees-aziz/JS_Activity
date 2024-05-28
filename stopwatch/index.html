@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        background: pink;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .stopwatch,
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    span {
+        width: 20%;
+        text-align: center;
+        margin: 10px;
+        font-size: 50px;
+        font-weight: bolder;
+        background-color: blueviolet;
+    }
+
+    button {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    button:hover {
+        background-color: green;
+        color: pink;
+    }
+</style>
+
+<body>
+    <h1>Stopwatch</h1>
+
+    <div class="stopwatch">
+        <span id="min">00</span>
+        <span id="sec">00</span>
+        <span id="milsec">00</span>
+    </div>
+    <div class="btn">
+        <button id="start" onclick="startBtn()">START</button>
+        <button id="stop" onclick="stopBtn()">STOP</button>
+    </div>
+    <script>
+
+        // assigning HTML value
+        let min = document.getElementById('min')
+        let sec = document.getElementById('sec')
+        let milsec = document.getElementById('milsec')
+
+
+
+        // functuion for stop watch
+        function myFuntion() {
+            if (milsec.innerText == '00') {
+                setInterval(() => {
+                    milsec.innerText++
+                    if (milsec.innerText == '60') {
+                        milsec.innerText = '00'
+                    }
+                }, 0);
+            }
+            if (sec.innerText == '00') {
+                setInterval(() => {
+                    sec.innerText++
+                    if (sec.innerText == '60') {
+                        sec.innerText = '00'
+                    }
+                }, 1000);
+            }
+            if (min.innerText == '00') {
+                setInterval(() => {
+                    min.innerText++
+                    if (min.innerText == '60') {
+                        min.innerText = '00'
+                    }
+                }, 60000);
+            }
+        }
+        //set interval
+        function startBtn() {
+            setInterval(myFuntion, 1000)
+        }
+        //clear interval
+        function stopBtn() {
+            clearInterval(setInterval)
+        }
+
+
+
+    // function stop() {
+    // clearInterval(function () { milsec.innerHTML })
+    // }
+    </script>
+</body>
+
+</html>

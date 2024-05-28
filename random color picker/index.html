@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Color Picker</title>
+    <style>
+      /* body {
+            background: #12345678;
+        } */
+    </style>
+  </head>
+
+  <body>
+    <h1>Random Infinite Color Changer</h1>
+    <button onclick="color()">Click</button>
+
+    <span id="color_name"></span>
+
+    <script>
+      console.clear();
+      let color_name = document.getElementById("color_name");
+      let characters = "0123456789abcdef"; // Include all valid hex characters
+
+      // Function to generate a random color
+      function color() {
+        let rand_color = "#";
+        for (let i = 0; i < 6; i++) {
+          // Generate a 6-character hex color code
+          let rand = Math.floor(Math.random() * characters.length);
+          rand_color += characters[rand];
+        }
+        let body = document.querySelector("body");
+        body.style.background = rand_color;
+        color_name.innerText = rand_color;
+        console.log(rand_color); // Log the generated color to the console
+      }
+    </script>
+  </body>
+</html>

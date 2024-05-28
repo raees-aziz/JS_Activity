@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Document</title>
+  </head>
+  <body class="bg-slate-800">
+    <div
+      class="lg:w-3/4 md:w-full sm:w-full h-[300px] bg-slate-400 m-auto mt-10 rounded-2xl p-2"
+    >
+      <h1 class="font-bold text-center text-4xl">Password Generators</h1>
+      <div class="w-3/4 m-auto">
+        <label class="text-center block my-3 text-2xl font-bold"
+          >Type Password Length in Number</label
+        >
+        <input
+          class="w-full block p-2 rounded-lg"
+          type="number"
+          placeholder="Length of password in digit"
+          id="passLength"
+        />
+      </div>
+      <div class="w-4/5 h-3/4 m-auto mt-4 flex p-4 gap-4 justify-center">
+        <div
+          class="custom rounded-lg w-1/4 h-[100px] bg-red-500 font-bold text-xl flex justify-center items-center"
+        >
+          Alphabet's
+        </div>
+        <div
+          class="custom rounded-lg w-1/4 h-[100px] bg-red-500 font-bold text-xl flex justify-center items-center"
+        >
+          Number's
+        </div>
+        <div
+          class="custom rounded-lg w-1/4 h-[100px] bg-red-500 font-bold text-xl flex justify-center items-center"
+        >
+          Special Symbol's
+        </div>
+      </div>
+      <button class="bg-red-400 w-full font-bold py-2 rounded-lg">
+        Generate
+      </button>
+
+      <div
+        class="w-full bg-slate-400 p-3 rounded text-center mt-8"
+        id="result"
+      ></div>
+      <div
+        id="clipboard"
+        class="w-[90px] active:bg-green-400 text-center rounded-lg hover:bg-slate-300 cursor-pointer my-2 m-auto bg-slate-100"
+      >
+        Copy Text
+      </div>
+    </div>
+    <!--  -->
+    <script src="./app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
